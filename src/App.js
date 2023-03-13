@@ -25,17 +25,12 @@ function App() {
 
   }, []);
 
-  console.log(rates)
-  // setRateUsd(rates.find(currency => currency.cc === "USD").rate)
-
 
 
 
 
   const inputFromPrice = (value) => {
     setFromPrice(value);
-    // const fromCurrencyRate = rates.find((currency) => currency.cc === fromCurrency).rate;
-    // const toCurrencyRate = rates.find((currency) => currency.cc === toCurrency).rate;
     const fromCurrencyRate = getCurrencyRate(fromCurrency);
     const toCurrencyRate = getCurrencyRate(toCurrency);
     const price = fromCurrencyRate / toCurrencyRate;
